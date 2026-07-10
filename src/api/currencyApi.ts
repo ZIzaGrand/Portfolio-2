@@ -8,7 +8,7 @@ export type CurrencyRate = {
 };
 
 
-export async function getRates(base = "EUR") {
+export async function getRates(base = "USD") {
   const response = await fetch(
     `${API_URL}/rates?base=${base}&from=2026-06-23&to=2026-06-24`
   );

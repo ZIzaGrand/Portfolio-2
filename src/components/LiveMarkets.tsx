@@ -39,8 +39,11 @@ function CurrencyCompare({_currency}:{_currency:CurrencyRate}) {
 
 function LiveMarkets() {
 	const {isMobile, currencyData} = useAppContext();
-	const textClass = isMobile ? "text-preset-6": "flex text-preset-5"
-	const currencyDataFirst25 = currencyData?.slice(40, 70);
+	const textClass = isMobile 
+					?"text-preset-6"
+					:"flex text-preset-5";
+
+	const currencyDataFirst25 = currencyData?.slice(40, 70) ?? [];
 
 
 	return (<>
@@ -51,11 +54,23 @@ function LiveMarkets() {
 						LIVE MARKETS
 					</h3>
 				</div>
-				<div className='flex liveMarket-currencyCompare'>
-					{currencyDataFirst25?.map((currency) => 
-						<CurrencyCompare key={currency.quote} _currency={currency}/>
-					)}
-				</div>	
+				<div className='liveMarket-scroll'>
+					<div className='flex liveMarket-currencyCompare'>
+						{currencyDataFirst25?.map((currency, index) => 
+							<CurrencyCompare 
+								key={`first-${currency.base}-${currency.quote}-${index}`} 
+								_currency={currency}
+							/>
+						)}
+						{/* Копия списка для бесшовного повторения */}
+						{currencyDataFirst25?.map((currency, index) => 
+							<CurrencyCompare 
+								key={`second-${currency.base}-${currency.quote}-${index}`} 
+								_currency={currency}
+							/>
+						)}
+					</div>	
+				</div>
 			</div>
 		</section>
 	</>);

@@ -1,8 +1,8 @@
 import "./Converter.css"
 import { useEffect, useState } from "react";
 import { useAppContext } from "./Context/AppContext";
-import {baseCurrency, baseCurrencyData} from "./History"
-
+import { baseCurrencyData } from "./History"
+import { baseCurrency } from "./Constants/Constants";
 
 
 type ValueProps = {
@@ -10,7 +10,6 @@ type ValueProps = {
   _setValue: (value: number) => void;
   _currancy: string
 };
-
 
 
 function ConverterInput({_value, _setValue, _currancy}:ValueProps) {
@@ -25,7 +24,7 @@ function ConverterInput({_value, _setValue, _currancy}:ValueProps) {
 					onChange={(e) => _setValue(Number(e.target.value))}
 					placeholder="0.000"
 					style={{
-						width: `${Math.max(_value.toFixed(2).length, 7)}ch`,
+						// width: `${Math.max(_value.toFixed(2).length, 6)}ch`, Доработать для коректного динамического отображения
 					}}
 				 />
 				<button className="flex">

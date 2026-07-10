@@ -64,12 +64,16 @@
 
 .converterInput-input {
 	width: 100%;
+
 	justify-content: space-between;
 	align-items: center;
+	gap: 20px;
+
 }
 
 .converterInput-input input {
-	/* max-width: 200px; */
+	width: 150px;
+	max-width: 100%;
 
 	color: var(--Neutral-50);
 	background-color: transparent;

@@ -58,6 +58,29 @@
 
 
 
-.liveMarket-currencyCompare {
+.liveMarket-scroll {
+	width: 100%;
+	overflow: hidden;
+}
 
+.liveMarket-currencyCompare {
+	height: 100%;
+	width: max-content;
+	flex-wrap: nowrap;
+
+	animation: liveMarketScroll 120s linear infinite;
+}
+
+.currencyCompare-block {
+	flex-shrink: 0;
+}
+
+@keyframes liveMarketScroll {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
 }

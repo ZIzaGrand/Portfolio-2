@@ -2,17 +2,13 @@ import { CurrencyChart } from "./Charts";
 import { useAppContext } from './Context/AppContext';
 import type { CurrencyRate } from "../api/currencyApi";
 import { currencyDiff } from "../api/currencyApi";
-
+import { baseCurrency } from "./Constants/Constants";
 import "./History.css"
 
-export const baseCurrency: Record<string,string> = {
-	base:"USD",
-	quote:"EUR"
-}
 
 export const baseCurrencyData: CurrencyRate = {
-	base:"USD",
-	quote:"EUR",
+	base:"RUB",
+	quote:"USD",
 	date:"2026-06-24",
 	rate:1
 
@@ -89,6 +85,8 @@ function Chart() {
 		currencyDataFiltred = [baseCurrencyData]
 	}
 
+	const date = new Date()
+	const dateString:string = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()
 
 	return (<>
 		<div className="flex content-wraper">
@@ -101,7 +99,7 @@ function Chart() {
 				base={baseCurrency.base}
 				quote={baseCurrency.quote}
 				from="2026-01-14"
-				to="2026-05-14"
+				to={dateString}
       />
 			</div>
 		</div>

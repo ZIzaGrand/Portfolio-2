@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { useIsMobile } from "../Hooks/useIsMobile";
 import {getRates} from "../../api/currencyApi"
 import type { CurrencyRate } from "../../api/currencyApi";
-import { Log } from "../Log";
+import { baseCurrency } from "../Constants/Constants";
 
 
 type AppContextType = {
@@ -20,7 +20,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 	const [currencyData, setCurrencyData] = useState<CurrencyRate[] | null>(null);
 	useEffect(() => {
 		async function LoadRetes() {
-			const data = await getRates("USD");
+			const data = await getRates(baseCurrency.base);
 			setCurrencyData(data);
 		}
 
