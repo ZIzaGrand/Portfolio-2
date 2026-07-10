@@ -1,0 +1,131 @@
+.devider {
+	width: 100%;
+	height: 1px;
+	margin-bottom: 20px;
+
+	background-color: var(--Neutral-600);	
+}
+
+
+main{
+	display: flex;
+	justify-content: center;
+}
+
+.main-wraper {
+	width: 1100px;
+	padding: 48px 32px ;
+
+	box-sizing: border-box;
+
+	flex-direction: column;
+	gap: 32px;
+}
+
+.details {
+	flex-direction: column;
+}
+
+
+/* TABS *//* TABS *//* TABS *//* TABS *//* TABS *//* TABS *//* TABS *//* TABS *//* TABS */
+.tabs {
+	
+	align-items: center;
+	gap: 8px;
+}
+
+@media (min-width:768px) {
+	.tabs *:focus {
+		outline: 0px;
+	}
+}
+
+.tabs *:focus {
+	outline: 0px;
+}
+
+.custom-select {
+  	position: relative;
+}
+
+.custom-select__button {
+	width: 100%;
+	padding: 10px 12px;
+
+	background: var(--Neutral-700);
+	border: 1px solid var(--Neutral-400);
+	border-radius: 8px;
+
+	text-align: left;
+	cursor: pointer;
+}
+
+.custom-select__list {
+	width: 100%;
+	padding: 8px;
+	margin: 0	;
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 42px;
+	left: 0;
+
+	background: var(--Neutral-700);
+	border: 1px solid var(--Neutral-400);
+	border-radius: 10px;
+
+	text-align: left;
+	list-style: none;
+}
+
+.custom-select__list li {
+	padding: 10px 8px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.custom-select__list li:hover {
+  	background-color: var(--Neutral-500);
+}
+
+
+
+
+
+
+.mobileTabs option {
+	border-radius: 8px;
+}
+
+.tabButton-wraper {
+	align-items: center;
+}
+
+.tabButton-wraper button {
+	padding: 10px 16px;
+	background-color: transparent;
+	border: 0px;
+
+	cursor: pointer;
+}
+
+.tabButton-active {
+	border-bottom: solid 1px var(--Lime-500);
+}
+
+.tabButton-count {
+	width: 20px;
+	height: 20px;
+	
+	position: relative;
+	right: 6px;
+
+	justify-content: center;
+	align-items: center;
+
+	color: var(--Lime-500);
+	background-color: var(--Lime-800);
+	border-radius: 50%;
+}
+
+

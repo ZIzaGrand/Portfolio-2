@@ -1,0 +1,63 @@
+.liveMarket-header {
+	padding: 12px 16px;
+
+	align-items: center;
+
+	color: var(--Neutral-900);
+	background-color: var(--Lime-500);
+}
+
+.liveMarket-header h3 {
+	margin: 0;
+
+	align-items: center;
+	gap: 8px;
+
+	line-height: 1;
+}
+
+.liveMarket-header h3::before {
+	font-size: 7px;
+	content: "⬤";
+}
+
+@media (max-width: 768px) {
+	.liveMarket-header{
+		padding: 12px 8px;
+	}
+
+	.liveMarket-header h3 {
+		white-space: nowrap;
+	}
+}
+
+
+.currencyCompare-block div{
+	align-items: center;
+}
+
+.currencyCompare-block{
+	padding: 12px 12px;
+
+	color: var(--Neutral-50);
+	background-color: var(--Neutral-700);
+	border-right: solid 1px var(--Neutral-500);
+
+	gap: 10px;
+}
+
+#currency p:first-child {
+	color: var(--Neutral-200);
+}
+
+#persDiff p::before {
+	font-size: 13px;
+	margin-right: 9px;
+}
+
+
+
+
+.liveMarket-currencyCompare {
+
+}

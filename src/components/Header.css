@@ -1,0 +1,24 @@
+.header-wraper {
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 20px 24px;
+}
+
+.header-wraper img {
+	height: 26px;
+}
+
+.header-wraper p{
+	color: var(--Neutral-200);
+}
+
+@media (max-width: 768px) {
+	.header-wraper {
+		padding: 16px;
+	}
+
+	.header-wraper img {
+		height: 20px;
+	}
+}

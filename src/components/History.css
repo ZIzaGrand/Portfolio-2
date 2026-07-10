@@ -1,0 +1,85 @@
+.history-wraper {
+	flex-direction: column;
+	gap: 20px;
+}
+
+.stats-wraper {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.stats {
+	gap: 16px;
+}
+
+.stat {
+	width: 140px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+
+	flex-direction: column;
+	align-items: start;
+	gap: 16px;
+
+	background-color: var(--Neutral-700);
+	border: solid 1px var(--Neutral-600);
+	border-radius: 16px;
+}
+
+.stat .positive p::before,
+.stat .negative p::before{
+	margin-right: 12px;
+}
+
+
+.periods-wraper {
+	justify-content: center;
+	align-items: center;
+}
+
+.periods-wraper ul {
+	margin: 0;
+	padding: 2px 0;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--Neutral-700);
+	border-radius: 8px;
+}
+
+.periods-wraper li {
+	width: 47px;
+	height: 38px;
+
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 8px;
+}
+
+.active {
+	background-color: var(--Neutral-500);
+}
+
+
+@media (max-width:768px) {
+	.stats-wraper {
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+	}
+
+
+	.stats {
+		width: 100%;
+		display: grid;
+		grid: 1fr 1fr/1fr 1fr;
+		gap: 10px;
+	}
+
+	.stat {
+		width: 100%;
+	}
+
+}

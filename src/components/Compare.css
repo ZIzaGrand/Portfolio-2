@@ -1,0 +1,49 @@
+.compare-wraper {
+	max-height: 600px;
+
+	flex-direction: column;
+	gap: 12px;
+}
+
+.compareButton {
+	padding: 12px 16px;
+
+	justify-content: space-between;
+	
+}
+
+.compareButton-left,
+.compareButton-rigth {
+	align-items: center;
+	gap: 20px;
+}
+
+.compareButton-left img {
+	width: 24px;
+	height: 24px;
+}
+
+.compareButton-left .compareButton-header {
+	align-items: start;
+}
+
+.compareButton-rigth .compareButton-header {
+	align-items: end;
+}
+
+.compareButton-rigth button {
+	height: 16px;
+	padding: 8px;
+	box-sizing: content-box;
+}
+
+.compareButton-rigth button img{
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+.compareButton-header {
+	flex-direction: column;
+	gap: 6px;
+}

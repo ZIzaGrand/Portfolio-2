@@ -1,0 +1,48 @@
+.log .content-header__rigth {
+	color: var(--Neutral-100);
+	align-items: center;
+	
+	gap: 16px;
+}
+
+.log .content-header__rigth button {
+	padding: 8px 12px;
+
+	color: var(--Neutral-200);;
+}
+
+
+/* logButton *//* logButton *//* logButton *//* logButton *//* logButton *//* logButton */
+.logButton-text__time{
+	width: 65px;
+	text-align: left;
+
+	color: var(--Neutral-200);
+}
+
+.logButton-header__left {
+	flex-direction: row;
+	align-items: center !important;
+	gap: 8px;
+}
+
+.logButton-header__left img {
+	width: 10%;
+	height: 10px;
+}
+
+.logButton-header__left p:last-child {
+	width: 100%;
+}
+
+.logButton-header__right {
+	gap: 2px;
+}
+
+@media (min-width:768px) {
+	.logButton-header__right {
+		flex-direction: row;
+		gap: 20px;
+	}
+}
+

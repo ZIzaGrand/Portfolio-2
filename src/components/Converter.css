@@ -1,0 +1,157 @@
+.converter {
+	flex-direction: column;
+	gap: 16px;
+}
+
+.converter h2 {
+	text-align: start;
+}
+
+.converter-wraper {
+	flex-direction: column;
+	background-color: var(--Neutral-700);
+	border-radius: 20px;
+}
+
+.converter-inputs {
+	padding: 20px;
+	
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+}
+
+
+
+.converter-inputs .swich-input{
+	padding: 14px;
+}
+
+.swich-input img{
+	display: block;
+}
+
+.converterInput-wraper{
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+
+	background-color: var(--Neutral-600);
+	border: solid 1px var(--Neutral-500);
+	border-radius: 16px;
+
+	flex-direction: column;
+	align-items: start;
+	gap: 24px;
+}
+
+@media (max-width: 768px) {
+	.converter-inputs {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.converterInput-wraper {
+		padding: 16px;
+	}
+
+	
+}
+
+.converterInput-wraper p {
+	color: var(--Neutral-100);
+}
+
+.converterInput-input {
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.converterInput-input input {
+	/* max-width: 200px; */
+
+	color: var(--Neutral-50);
+	background-color: transparent;
+	border: 0;
+	border-radius: 8px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.converterInput-input button {
+	height: 18px;
+	padding: 10px;
+	box-sizing: content-box;
+
+	align-items: center;
+	gap: 8px;
+
+	background-color: var(--Neutral-500);
+	border: solid 1px var(--Neutral-400);
+}
+
+.converterInput-input button:hover {
+	background-color: var(--Neutral-400);
+}
+
+.converterInput-input img { /* WIP*/
+	width: 18px;
+	display: block;
+	border-radius: 50%;
+}
+
+.converterInput-input span{
+	color: var(--Neutral-50);
+	transform: rotate(-45deg) scale(0.7);
+	margin-bottom: 5px;
+}
+
+.converter-buttons{
+	padding: 16px 20px;
+
+	justify-content: space-between;
+	align-items: center;
+
+	border-top	: dashed 1px var(--Neutral-500);
+}
+
+@media (max-width: 768px) {
+	.converter-buttons {
+		flex-direction: column;
+		justify-content:center;
+		gap: 16px;
+	}
+
+	.converter-fav__block {
+		gap: 20px;
+	}
+
+	
+}
+
+.converter-fav__block {
+	gap: 12px;
+}
+
+.converter-fav__block button {
+	padding: 8px 12px;
+}
+
+.converter-fav__block button:last-child {
+	background-color: transparent;
+	border: solid 1px var(--Lime-500);
+}
+
+.converter-fav__block button:last-child:hover {
+	background-color: var(--Lime-800);
+	
+}

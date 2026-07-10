@@ -1,0 +1,22 @@
+
+.favoritesButton-left{
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+}
+
+.favoritesButton-left p:last-child {
+	width: 100%;
+}
+
+.favoritesButton-left img {
+	width: 10%;
+	height: 10px;
+}
+
+.favorites .positive p::before,
+.favorites .negative p::before {
+	margin-right: 6px;
+}
+
+
