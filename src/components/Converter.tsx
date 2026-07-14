@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useAppContext } from "./Context/AppContext";
 import { baseCurrencyData } from "./History"
 import { baseCurrency } from "./Constants/Constants";
+import SwitchVertical from "../assets/images/icon-exchange-vertical.svg"
+import SwitchHorisontal from "../assets/images/icon-exchange.svg"
 
 
 type ValueProps = {
@@ -28,7 +30,7 @@ function ConverterInput({_value, _setValue, _currancy}:ValueProps) {
 					}}
 				 />
 				<button className="flex">
-					<img src={`/src/assets/images/flags/${_currancy.toLowerCase().slice(0,2)}.webp`} alt="" />
+					<img src={`${import.meta.env.BASE_URL}flags/${_currancy.toLowerCase().slice(0,2)}.webp`} alt="" />
 					<p className="text-preset-4">{_currancy}</p>
 					<span>◣</span>
 				</button>
@@ -43,8 +45,8 @@ export function Converter() {
 	const { isMobile, currencyData } = useAppContext();
 
 	const imgSwitch = isMobile
-		? "/src/assets/images/icon-exchange-vertical.svg"
-		: "/src/assets/images/icon-exchange.svg";
+		? SwitchVertical
+		: SwitchHorisontal;
 
 	const currencyDataFiltred = currencyData
 		? currencyData.filter((currency) => currency.quote === baseCurrency.quote)

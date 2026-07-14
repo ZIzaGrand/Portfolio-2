@@ -1,5 +1,9 @@
 import "./Compare.css"
 import "./Favorites.css"
+import Arrow from "../assets/images/icon-arrow-right.svg"
+import StarIcon from "../assets/images/icon-star.svg"
+
+
 
 
 function FavoritesButton() {
@@ -8,7 +12,7 @@ function FavoritesButton() {
 			<div className="flex compareButton-left">
 				<div className="flex compareButton-header favoritesButton-left">
 					<p className="text-preset-4">GBP</p>
-					<img src="/src/assets/images/icon-arrow-right.svg" alt="" />
+					<img src={Arrow} alt="" />
 					<p className="text-preset-4">British Pound</p>
 				</div>
 			</div>
@@ -20,7 +24,7 @@ function FavoritesButton() {
 					</div>
 				</div>
 				<button className="">
-					<img src="/src/assets/images/icon-star.svg" alt="" />
+					<img src={StarIcon} alt="" />
 				</button>
 			</div>
 

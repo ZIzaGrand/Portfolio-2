@@ -1,11 +1,12 @@
 import "./Compare.css"
+import StarIcon from "../assets/images/icon-star.svg"
 
 
 function CompareButton() {
 	return (<>
 		<button className="flex compareButton">
 			<div className="flex compareButton-left">
-				<img className="flag-img" src="/src/assets/images/flags/ca.webp" alt="" />
+				<img className="flag-img" src={`${import.meta.env.BASE_URL}flags/id.webp`} alt="" />
 				<div className="flex compareButton-header">
 					<p className="text-preset-4">GBP</p>
 					<p className="text-preset-5">British Pound</p>
@@ -17,7 +18,7 @@ function CompareButton() {
 					<p className="text-preset-6">@ 0.7366</p>
 				</div>
 				<button className="">
-					<img src="/src/assets/images/icon-star.svg" alt="" />
+					<img src={StarIcon} alt="" />
 				</button>
 			</div>
 
