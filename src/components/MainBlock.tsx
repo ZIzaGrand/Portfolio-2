@@ -5,7 +5,6 @@ import {Favorites} from "./Favorites"
 import {Log} from "./Log"
 import {Converter} from "./Converter"
 import { useAppContext } from "./Context/AppContext";
-import React, { useState, useRef  } from "react"
 import type { ReactNode } from "react";
 
 
