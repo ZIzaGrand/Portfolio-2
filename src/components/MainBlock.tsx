@@ -18,7 +18,7 @@ const tabs: Record<string, ReactNode> = {
 
 type TabsData = {
 	tabSelected: string
-  	onTabClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+  	onTabClick: (tabName:string) => void;
 };
 
 type TabsProps = {
@@ -37,7 +37,9 @@ function TabButton({name, count, tabsData}: TabButtonProps) {
 	const isActive = tabsData.tabSelected == name
 	return (<>
 		<div className={`flex tabButton-wraper ${isActive ? 'tabButton-active': ''}`}>
-			<button className="flex text-preset-3" onClick={tabsData.onTabClick}>{name}</button>
+			<button className="flex text-preset-3" onClick={() => tabsData.onTabClick(name)}>
+				{name}
+			</button>
 
 			{isVisible &&(
 			<div className="flex tabButton-count">
@@ -83,10 +85,10 @@ function MobileTabs({tabsData}:TabsProps) {
 
 			{isFocused && (
 				<ul className="text-preset-3 custom-select__list">
-					<li onClick={tabsData.onTabClick}>HISTORY</li>
-					<li onClick={tabsData.onTabClick}>COMPARE</li>
-					<li onClick={tabsData.onTabClick}>FAVORITES</li>
-					<li onClick={tabsData.onTabClick}>LOG</li>
+					<li onClick={() => tabsData.onTabClick("HISTORY")}>HISTORY</li>
+					<li onClick={() => tabsData.onTabClick("COMPARE")}>COMPARE</li>
+					<li onClick={() => tabsData.onTabClick("FAVORITES")}>FAVORITES</li>
+					<li onClick={() => tabsData.onTabClick("LOG")}>LOG</li>
 				</ul>
       		)}
 		</div>
@@ -107,11 +109,8 @@ function Main() {
 
 
 
-	function onTabClick(event: React.MouseEvent<HTMLDivElement>) {
-		const tabName = event.currentTarget.textContent
-		setTabSelected(tabName)
-
-		
+	function onTabClick(tabName: string) {
+		setTabSelected(tabName);
 	}
 
 
